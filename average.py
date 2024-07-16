@@ -6,8 +6,10 @@ factor = int(input("write me the key: "))
 
 lista = []
 for item in message:
-    lista += [ord(item)+factor % 127]
+    lista += [(ord(item)+factor) % 127]
 
-print(lista)
+newmessage = ""
 for item in lista:
-    print(chr(item))
+    newmessage += chr(item)
+
+print(newmessage)
